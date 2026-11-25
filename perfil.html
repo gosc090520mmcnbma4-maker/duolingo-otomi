@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mi Perfil - Camila</title>
+<style>
+  body { margin:0; padding:32px 16px; background:#f4f7fb; color:#81a5d1; font-family:Arial,sans-serif; }
+  h1 { margin:0 0 24px; text-align:center; }
+  .boton-inicio { display:inline-flex; align-items:center; gap:8px; margin-bottom:20px; padding:10px 16px; border-radius:10px; background:#0876bd; color:#fff; font-weight:600; text-decoration:none; }
+  .boton-inicio:hover { background:#065d96; }
+  #contenedor { width:min(100%,720px); margin:0 auto; }
+  .perfil-card { padding:28px; background:#fff; border:1px solid #e5eaf0; border-radius:18px; box-shadow:0 8px 24px rgba(38,52,69,.08); }
+  .foto-perfil-container { display:flex; justify-content:center; margin-bottom:16px; }
+  .foto-perfil { width:112px; height:112px; border:4px solid #e6f4ff; border-radius:50%; object-fit:cover; }
+  .perfil-card h2 { margin:0 0 6px; text-align:center; }
+  .usuario { text-align:center; color:#0876bd; font-weight:700; margin:0 0 18px; }
+  .datos-perfil { color:#526174; text-align:center; }
+  .datos-perfil p { margin:8px 0; }
+  .titulo-progreso { margin:28px 0 14px; font-size:18px; }
+  .estadisticas { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .estadistica { display:flex; min-height:120px; flex-direction:column; align-items:center; justify-content:center; gap:6px; padding:16px 10px; border-radius:14px; text-align:center; }
+  .estadistica--porcentaje { background:#e6f4ff; color:#0876bd; }
+  .estadistica--experiencia { background:#f0eaff; color:#7041bd; }
+  .estadistica--racha { background:#fff0df; color:#c76a12; }
+  .estadistica-valor { font-size:30px; line-height:1.1; font-weight:800; }
+  .estadistica-label { font-size:14px; font-weight:600; }
+  .detalles-progreso { margin-top:20px; padding-top:12px; border-top:1px solid #e5eaf0; color:#526174; }
+  @media (max-width:520px){ .estadisticas{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<a class="boton-inicio" href="index.html">🏠 Volver al inicio</a>
+<h1>Mi Perfil</h1>
+
+<div id="contenedor"></div>
+
+<script>
+const usuario = {
+  nombre: "Camila Gonzalez Sebastian",
+  username: "camilux27",
+  foto: "https://mmg.whatsapp.net/v/t62.7118-24/900850523_1472970538181833_3715903992584956122_n.enc?ccb=11-4&oh=01_Q5Aa6AFiNZ-D4ZEPT7ixzw_nTGQ_u0Iy6sxeSg4iPcFlrGcjIQ&oe=6B1D891D&_nc_sid=5e03e0",
+  fecha: "noviembre de 2026",
+  siguiendo: 8,
+  seguidores: 24,
+  porcentaje: 360,
+  exp: 270,
+  racha: 11,
+  division: "Diamante",
+  top3: 7,
+  palabras: 500
+};
+
+document.getElementById("contenedor").innerHTML = `
+  <div class="perfil-card">
+    <div class="foto-perfil-container">
+      <img class="foto-perfil" src="${usuario.foto}" alt="Foto de ${usuario.nombre}">
+    </div>
+    <h2>${usuario.nombre}</h2>
+    <p class="usuario">@${usuario.username}</p>
+    <div class="datos-perfil">
+      <p>📅 Se unió en ${usuario.fecha}</p>
+      <p>👥 Siguiendo a ${usuario.siguiendo} &nbsp;•&nbsp; ${usuario.seguidores} seguidores</p>
+    </div>
+
+    <h3 class="titulo-progreso">Progreso</h3>
+    <div class="estadisticas">
+      <div class="estadistica estadistica--porcentaje">
+        <div class="estadistica-valor">${usuario.porcentaje}%</div>
+        <div class="estadistica-label">Completado</div>
+      </div>
+      <div class="estadistica estadistica--experiencia">
+        <div class="estadistica-valor">${usuario.exp} EXP</div>
+        <div class="estadistica-label">Experiencia</div>
+      </div>
+      <div class="estadistica estadistica--racha">
+        <div class="estadistica-valor">🔥 ${usuario.racha} días</div>
+        <div class="estadistica-label">Racha</div>
+      </div>
+    </div>
+
+    <div class="detalles-progreso">
+      <p>💎 División: <b>${usuario.division}</b> - 2 semanas</p>
+      <p>🏆 Veces en Top 3: <b>${usuario.top3}</b></p>
+      <p>📚 Palabras aprendidas: <b>${usuario.palabras}</b></p>
+      <p>🔥 Logro: En llamas - ${usuario.racha} días seguidos</p>
+      <p>🎓 Logro: Sabio - ${usuario.palabras} palabras aprendidas</p>
+    </div>
+  </div>
+`;
+</script>
+
+</body>
+</html>
+
+

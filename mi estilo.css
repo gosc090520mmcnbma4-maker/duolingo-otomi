@@ -1,0 +1,251 @@
+
+/* ===== ESTILOS GENERALES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background: #f8effb;
+    color: #4b3155;
+    min-height: 100vh;
+}
+
+/* ===== SECCIONES DE LAS LECCIONES ===== */
+section {
+    display: none;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+    animation: aparecer 0.5s ease;
+}
+
+/* Mostrar la primera lección */
+#leccion1 {
+    display: block;
+    background: linear-gradient(135deg, #b781c0, #9263b1) !important;
+    color: white;
+}
+
+#leccion2 {
+    background: linear-gradient(135deg, #e1a3ec, #c68cda) !important;
+}
+
+#leccion3 {
+    background: linear-gradient(135deg, #edbff5, #d9a4ed) !important;
+}
+
+/* ===== TÍTULOS ===== */
+section > h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+section > h1 {
+    font-size: clamp(25px, 4vw, 38px);
+    font-weight: 800;
+    margin-bottom: 35px;
+    line-height: 1.3;
+}
+
+/* ===== CONTENEDOR DE TARJETAS ===== */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto 35px;
+}
+
+/* ===== TARJETAS ===== */
+.card {
+    background: white;
+    color: #50365c;
+    width: 250px;
+    min-height: 270px;
+    padding: 22px 18px;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(67, 32, 78, 0.15);
+    border: 3px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 28px rgba(67, 32, 78, 0.22);
+    border-color: #b781c0;
+}
+
+.card:active {
+    transform: scale(0.96);
+}
+
+/* ===== IMÁGENES ===== */
+.card img {
+    width: 100%;
+    max-width: 175px;
+    height: 155px;
+    object-fit: contain;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.06);
+}
+
+/* ===== TEXTO DE LAS TARJETAS ===== */
+.card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #754b86;
+    margin: 0;
+}
+
+.contenido {
+    width: 100%;
+}
+
+/* ===== BOTONES ===== */
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.botones button {
+    min-width: 160px;
+    padding: 15px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Botón comprobar */
+.comprobar {
+    background: #ffffff;
+    color: #86549b;
+    box-shadow: 0 6px 15px rgba(60, 30, 70, 0.15);
+}
+
+.comprobar:hover {
+    background: #754b86;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(60, 30, 70, 0.2);
+}
+
+/* Botón saltar */
+.saltar {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white !important;
+}
+
+.saltar:hover {
+    background: white;
+    color: #86549b;
+    transform: translateY(-3px);
+}
+
+/* ===== MENSAJES DE RESULTADO ===== */
+.resultado {
+    margin: 25px auto 0;
+    font-size: 20px;
+    font-weight: 700;
+    max-width: 500px;
+}
+
+/* ===== ANIMACIÓN ===== */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== DISEÑO PARA CELULARES ===== */
+@media (max-width: 600px) {
+    section {
+        padding: 30px 15px;
+    }
+
+    section > h3 {
+        font-size: 15px;
+    }
+
+    section > h1 {
+        margin-bottom: 25px;
+    }
+
+    .container {
+        gap: 15px;
+    }
+
+    .card {
+        width: min(100%, 300px);
+        min-height: 220px;
+        padding: 18px;
+    }
+
+    .card img {
+        height: 125px;
+        max-width: 150px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .botones {
+        gap: 12px;
+    }
+
+    .botones button {
+        min-width: 135px;
+        padding: 13px 18px;
+        font-size: 13px;
+    }
+}
+
+/* ===== ACCESIBILIDAD ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+

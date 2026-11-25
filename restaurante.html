@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Delicias</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+          background-color: #fff8f0;
+          color: #333;
+        }
+
+        /* Menú de navegación */
+        nav {
+          background-color: #8b2e2e;
+          padding: 15px 0;
+          position: sticky;
+          top: 0;
+          z-index: 100;
+        }
+
+        nav ul {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          gap: 25px;
+          flex-wrap: wrap;
+        }
+
+        nav ul li a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 17px;
+          padding: 8px 14px;
+          border-radius: 20px;
+          transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+          background-color: #ffcc70;
+          color: #8b2e2e;
+        }
+
+        /* Secciones */
+        section {
+          max-width: 800px;
+          margin: 30px auto;
+          padding: 25px;
+          background-color: white;
+          border-radius: 15px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          text-align: center;
+        }
+
+        section h2 {
+          color: #8b2e2e;
+          font-size: 28px;
+          margin-bottom: 10px;
+        }
+
+        section h3 {
+          color: #e89b3c;
+          font-size: 22px;
+          margin-bottom: 5px;
+        }
+
+        section p {
+          font-size: 17px;
+          margin-bottom: 15px;
+          color: #555;
+        }
+
+        /* Imágenes */
+        .imagen img {
+          width: 100%;
+          max-width: 500px;
+          height: 280px;
+          object-fit: cover;
+          border-radius: 12px;
+          border: 3px solid #ffcc70;
+        }
+    </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#desayunos">Desayunos</a></li>
+      <li><a href="#bebidas">Bebidas</a></li>
+      <li><a href="#postres">Postres</a></li>
+      <li><a href="#pastas">Pastas</a></li>
+    </ul>
+  </nav>
+
+  <section id="inicio">
+    <h3>Daniela Desire</h3>
+    <h2>Inicio</h2>
+    <p>Bienvenido a nuestro restaurante.</p>
+    <div class="imagen">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC3LRaqOfmc0L5c0m_y5imkmQ_umA3TjmmJ1ZtTYDfuw&s=10">
+    </div>
+  </section>
+
+  <section id="desayunos">
+    <h2>Desayunos</h2>
+    <p>Los mejores desayunos para comenzar el día.</p>
+    <div class="imagen">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6hFP5ILRoXVjYOV2G1ybqNEKgl965cEaM-41wOfFIIg&s=10">
+    </div>
+  </section>
+
+  <section id="bebidas">
+    <h2>Bebidas</h2>
+    <p>Refrescantes bebidas para todos los gustos.</p>
+    <div class="imagen">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd9NHoJvlb5FpQoGscH1cw-VOx4C80GNwYcnXx9vQptw&s=10">
+    </div>
+  </section>
+
+  <section id="postres">
+    <h2>Postres</h2>
+    <p>Deliciosos postres preparados al momento.</p>
+    <div class="imagen">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8vtWd7__8QonQnjTXrZi7wbbcX18bWlVuAn8-aSut7w&s=10">
+    </div>
+  </section>
+
+  <section id="pastas">
+    <h2>Pastas</h2>
+    <p>Variedad de pastas con recetas tradicionales.</p>
+    <div class="imagen">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SiqZydmEmldzckCsz20h4AHTl3ujM9Q5WHQaraWqmw&s=10">
+    </div>
+  </section>
+
+</body>
+</html>
